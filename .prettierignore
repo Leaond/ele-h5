@@ -1,0 +1,4 @@
+# Ignore artifacts:
+**/.git
+**/.hg
+**/node_modules
