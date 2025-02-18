@@ -1,5 +1,7 @@
 <script setup lang="ts">
 // import {RouterView } from 'vue-router'
+import { testApi } from './api/test';
+testApi()
 </script>
 
 <template>
