@@ -1,5 +1,4 @@
 
-// Prettier配置文档：https://prettier.io/docs/en/options.html
 export default {
 	// 指定prettier将换行的行长<int>，默认80
 	printWidth: 120,
