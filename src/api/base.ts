@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Dialog } from "vant";
 const instance = axios.create({
-baseURL:'api'
+    baseURL:'api'
 })
 instance.interceptors.response.use((response)=>{
 const {data:_data} = response

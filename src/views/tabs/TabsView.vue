@@ -16,9 +16,9 @@ import { useRoute,useRouter } from 'vue-router';
 const route = useRoute()
 const router = useRouter()
 const active = ref(route.name as string);
-function onChange(index:any){
+function onChange(index:string){
     router.push({
-        path:index
+        path:`/tabs/${index}`
     })
 }
 </script>
