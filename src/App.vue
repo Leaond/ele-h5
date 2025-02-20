@@ -6,9 +6,7 @@
     <RouterView />
 </template>
 
-<style scoped lang="scss">
-@import 'normalize.css';
-
+<style lang="scss">
 #app {
     // 字体抗锯齿
     -webkit-font-smoothong: antialiased;
