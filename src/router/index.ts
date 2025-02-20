@@ -6,21 +6,25 @@ import MineView from '../views/tabs/components/MineView.vue';
 import OrderView from '../views/tabs/components/OrderView.vue';
 
 const routes = [
-  { path: '/', component: TabsView },
+  { path: '/', redirect: '/home' },
   {
     path: '/tabs',
+    name: 'tabs',
     component: TabsView,
     children: [
       {
-        path: 'home',
+        path: '/home',
+        name: 'home',
         component: HomeView
       },
       {
-        path: 'order',
+        path: '/order',
+        name: 'order',
         component: OrderView
       },
       {
-        path: 'mine',
+        path: '/mine',
+        name: 'mine',
         component: MineView
       }
     ]

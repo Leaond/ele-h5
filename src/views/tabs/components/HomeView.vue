@@ -1,7 +1,6 @@
 <template>
   <div class="home-page">
-
-    <TheTop .recommends="recommends"></TheTop>
+    <TheTop :recommends="recommends"></TheTop>
   </div>
 </template>
 
