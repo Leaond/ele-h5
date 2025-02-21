@@ -1,0 +1,37 @@
+{
+  "id": "4832754",
+  "name": "ele-h5",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "饿了么移动端仿制",
+  "glyphs": [
+    {
+      "icon_id": "1004599",
+      "name": "推荐",
+      "font_class": "tuijian",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "1183130",
+      "name": "定位",
+      "font_class": "dingwei",
+      "unicode": "e675",
+      "unicode_decimal": 58997
+    },
+    {
+      "icon_id": "3456452",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e70b",
+      "unicode_decimal": 59147
+    },
+    {
+      "icon_id": "25050829",
+      "name": "饿了么",
+      "font_class": "elemo",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    }
+  ]
+}
