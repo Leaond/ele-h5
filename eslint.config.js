@@ -1,7 +1,7 @@
 /*
  * @Date: 2025-02-17 10:50:16
  * @LastEditors: liuzhengliang
- * @LastEditTime: 2025-02-17 11:26:05
+ * @LastEditTime: 2025-02-21 11:50:22
  * @Description:
  */
 import globals from 'globals';
@@ -21,7 +21,7 @@ export default [
   eslintConfigPrettier,
   {
     rules: {
-      'no-unused-vars': 'warn',
+      // 'no-unused-vars': 'warn',
       'no-undef': 'warn'
       // "no-console": "warn",
     }

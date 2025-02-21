@@ -1,29 +1,32 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import { VantResolver } from '@vant/auto-import-resolver';
+import path from 'path';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: 
-  [
+  plugins: [
     vue(),
     AutoImport({
-      resolvers: [VantResolver()],
+      resolvers: [VantResolver()]
     }),
     Components({
-      resolvers: [VantResolver()],
-    }),
+      resolvers: [VantResolver()]
+    })
   ],
-  resolve:{
-    extensions:['.mjs', '.js', '.mts', '.ts', '.jsx', '.tsx', '.json']
+  resolve: {
+    alias: {
+      '@': path.resolve('./src')
+    },
+    extensions: ['.mjs', '.js', '.mts', '.ts', '.jsx', '.tsx', '.json']
   },
-  server:{
-    port:3000,
-    proxy:{
-      '/api':'http://localhost:8000',
-      '/imgs':'http://localhost:8000',
+  server: {
+    port: 3000,
+    proxy: {
+      '/api': 'http://localhost:8000',
+      '/imgs': 'http://localhost:8000'
     }
   }
-})
+});
