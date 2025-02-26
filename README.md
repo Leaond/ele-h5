@@ -1,10 +1,3 @@
-<!--
- * @Date: 2025-02-21 11:39:37
- * @LastEditors: liuzhengliang
- * @LastEditTime: 2025-02-21 13:48:26
- * @Description:
--->
-
 # vue3+vite+pinia移动端项目
 
 1. 创建项目
@@ -56,4 +49,46 @@ npm i sass -D
 配置路径别名1.在vite.config.ts中设置路径别名2.在根目录上配置tsconfig.json，如果没有该文件需要自主创建。并配置3.如果path模块引入报错，需要安装@types/node插件。
 
 使用iconfont来替代图片资源1.创建项目，将图标添加到项目里面2.下载项目，并且将里面的资源放到项目里：/assets/iconfont 3.再index.html里面添加引用css样式文件：
+
 <link rel="stylesheet" href="/src/assets/iconfont/iconfont.css" />
+
+配置husky和commitlint安装 `@commitlint/config-conventional`是commitlint推荐的提交校验规则
+
+```js
+npm install --save-dev husky @commitlint/cli @commitlint/config-conventional
+```
+
+初始化husky脚本
+
+```js
+npx husky init
+或
+pnpm exec husky init
+```
+
+初始化之后，会在项目的根目录中创建一个.husky的文件夹，下面会有一个\_的文件夹。同时在package.json中会添加一行脚本命令``. 接下来在.husky的根目录下创建`commit-msg`文件，不要给任何的后缀名。里面添加脚本
+
+```js
+// commit-msg
+npx commitlint --edit $1
+```
+
+完成配置之后我们尝试一下提交校验
+
+```js
+git add . -m '测试提交'
+```
+
+如果配置没出别的问题.那么此时应该会提示校验不通过，并给出更改提示
+
+```js
+> git -c user.useConfigOnly=true commit --quiet --allow-empty-message --file -
+⧗   input: 测试提交
+✖   subject may not be empty [subject-empty]
+✖   type may not be empty [type-empty]
+
+✖   found 2 problems, 0 warnings
+ⓘ   Get help: https://github.com/conventional-changelog/commitlint/#what-is-commitlint
+
+husky - commit-msg script failed (code 1)
+```
