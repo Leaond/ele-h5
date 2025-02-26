@@ -52,6 +52,8 @@ npm i sass -D
 
 <link rel="stylesheet" href="/src/assets/iconfont/iconfont.css" />
 
+Husky 是一个 Git 钩子管理器，允许你在仓库级别方便地配置钩子脚本；而 Commitlint 则是用来规范 Git 提交信息的工具，确保每次提交都遵循一定的格式标准。
+
 配置husky和commitlint安装 `@commitlint/config-conventional`是commitlint推荐的提交校验规则
 
 ```js
