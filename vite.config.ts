@@ -20,7 +20,7 @@ export default defineConfig({
     alias: {
       '@': path.resolve('./src')
     },
-    extensions: ['.mjs', '.js', '.mts', '.ts', '.jsx', '.tsx', '.json']
+    extensions: ['.mjs', '.js', '.mts', '.ts', '.jsx', '.tsx', '.json', '.vue']
   },
   server: {
     port: 3000,

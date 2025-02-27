@@ -1,7 +1,7 @@
 <!--
  * @Date: 2025-02-21 11:39:37
  * @LastEditors: liuzhengliang
- * @LastEditTime: 2025-02-21 13:50:46
+ * @LastEditTime: 2025-02-27 11:40:51
  * @Description: 
 -->
 <template>
@@ -24,8 +24,7 @@
 </template>
 
 <script setup lang="ts">
-  import type { ISearchRecomment } from '@/types/index.ts';
-  import OpSearch from '@/components/OpSearch';
+  import type { ISearchRecomment } from '@/types/index';
   interface IProps {
     recommends: ISearchRecomment[];
   }
